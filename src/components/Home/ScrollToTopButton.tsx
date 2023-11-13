@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ArrowUp from '../static/images/arrow-up.svg';
-import { scrollToTop } from '../utils/scrollUtils';
+import ArrowUp from '../../static/images/arrow-up.svg';
+import { scrollToTop } from '../../utils/scrollUtils';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);

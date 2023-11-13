@@ -1,7 +1,7 @@
 import React from 'react';
 import ArticleHeader from './ArticleHeader';
 import { AiOutlineCheck } from 'react-icons/ai';
-import tistory from '../static/images/tistory.jpg';
+import tistory from '../../static/images/tistory.jpg';
 
 type Props = {};
 

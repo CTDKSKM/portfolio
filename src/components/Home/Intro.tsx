@@ -1,5 +1,5 @@
 import React from 'react';
-import AuroraEffect from './AuroraEffect';
+import AuroraEffect from '../AuroraEffect';
 
 type Props = {};
 

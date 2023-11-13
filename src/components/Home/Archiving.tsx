@@ -1,7 +1,7 @@
 import React from 'react';
 import ArticleHeader from './ArticleHeader';
-import github from '../static/images/github.png';
-import tistory from '../static/images/tistory.jpg';
+import github from '../../static/images/github.png';
+import tistory from '../../static/images/tistory.jpg';
 
 type Props = {};
 const skillContainers = [

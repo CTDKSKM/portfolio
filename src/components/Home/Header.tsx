@@ -1,6 +1,6 @@
 import React, { useState, useEffect, CSSProperties } from 'react';
-import { scrollToSection } from '../utils/scrollUtils';
-import { scrollToTop } from '../utils/scrollUtils';
+import { scrollToSection } from '../../utils/scrollUtils';
+import { scrollToTop } from '../../utils/scrollUtils';
 
 type Props = {};
 

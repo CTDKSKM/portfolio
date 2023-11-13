@@ -1,5 +1,5 @@
 import React from 'react';
-import { scrollToSection } from '../utils/scrollUtils';
+import { scrollToSection } from '../../utils/scrollUtils';
 
 type Props = {
   name: string;
@@ -8,7 +8,6 @@ type Props = {
 // 아티클 제목을 띄어줍니다
 
 const ArticleHeader = ({ name }: Props) => {
-  
   return (
     <header className="flex justify-center gap-1 mb-12 text-center mt-6">
       <div
@@ -26,7 +25,9 @@ const ArticleHeader = ({ name }: Props) => {
         />
       </div>
 
-      <div style={{fontWeight: 900}} className="text-5xl font-bold underline">{name.toUpperCase()}</div>
+      <div style={{ fontWeight: 900 }} className="text-5xl font-bold underline">
+        {name.toUpperCase()}
+      </div>
     </header>
   );
 };

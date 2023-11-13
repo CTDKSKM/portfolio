@@ -1,11 +1,11 @@
 import React from 'react';
 import ArticleHeader from './ArticleHeader';
-import person from '../static/images/person.svg';
-import calender from '../static/images/calender.svg';
-import locator from '../static/images/locator.svg';
-import phoneCall from '../static/images/phone-call.svg';
-import mail from '../static/images/mail.svg';
-import pen from '../static/images/pen.svg';
+import person from '../../static/images/person.svg';
+import calender from '../../static/images/calender.svg';
+import locator from '../../static/images/locator.svg';
+import phoneCall from '../../static/images/phone-call.svg';
+import mail from '../../static/images/mail.svg';
+import pen from '../../static/images/pen.svg';
 
 type Props = {};
 
