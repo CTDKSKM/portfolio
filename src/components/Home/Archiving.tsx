@@ -4,10 +4,7 @@ import github from '../../static/images/github.png';
 import tistory from '../../static/images/tistory.jpg';
 
 type Props = {};
-const skillContainers = [
-  { value: 'GitHub', imgUrl: 'logo192.png', height: 500 },
-  { value: 'Tistory', imgUrl: 'logo192.png', height: 350 }
-];
+
 const Archiving = (props: Props) => {
   return (
     <article id="archiving" className="w-full py-10 bg-red-300">

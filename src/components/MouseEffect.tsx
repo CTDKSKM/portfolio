@@ -8,14 +8,16 @@ type Props = {
   size: number;
 };
 
-const delay = 850;
+const delay = 650;
 
 const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
-  const self = useRef<HTMLDivElement>(null);
-  const randomR = Math.random() * 220 + 35;
-  const randomG = Math.random() * 220 + 35;
-  const randomB = Math.random() * 220 + 35;
-  const randomA = Math.random();
+  const self = useRef<HTMLDivElement | null>(null);
+  const num1 = 190;
+  const num2 = 255 - num1;
+  const randomR = Math.random() * num1 + num2;
+  const randomG = Math.random() * num1 + num2;
+  const randomB = Math.random() * num1 + num2;
+  const randomA = Math.random() / 2 + 0.5;
 
   useEffect(() => {
     if (self.current instanceof HTMLDivElement) {
@@ -28,7 +30,7 @@ const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
 
         self.current.style.backgroundColor = `rgba(${randomR},${randomG},${randomB},${(randomA + 1) / 2})`;
 
-        self.current.style.transform = `translate(${(randomA - 0.5) * -1 * size + 'px'},${
+        self.current.style.transform = `translate(${(randomA - 0.5) * -size + 'px'},${
           (randomA - 0.5) * size + 'px'
         }) scale(${Math.max(2, 2 + ((randomA + 1) / 5 + 0.5))})`;
 
@@ -36,7 +38,7 @@ const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
           if (!self.current) return;
           deleteFn(id);
         }, delay + 150);
-      }, 50);
+      }, 45);
     }
   }, []);
 
@@ -52,8 +54,8 @@ const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
         backgroundColor: 'transparent',
         borderRadius: '50%',
         pointerEvents: 'none',
-        transition: `all ${delay / 1000 + 's'} ease`,
-        filter: 'brightness(1.3)',
+        transition: `all ${delay / 1000 + 's'} ease-out`,
+        filter: 'brightness(1.35)',
         zIndex: '9999'
       }}
     ></div>
