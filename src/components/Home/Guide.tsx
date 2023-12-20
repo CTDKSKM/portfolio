@@ -15,6 +15,7 @@ const Guide = ({ close }: Props) => {
   useEffect(() => {
     if (viewCount > 4) close();
   }, [viewCount]);
+
   return (
     <>
       <div className="absolute top-0 left-0 w-[100vw] h-[100vh] z-50 bg-black opacity-80">

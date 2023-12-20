@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRecoilState } from 'recoil';
 import { itemState } from '../recoil/itemState';
 import debounce from 'lodash/debounce';

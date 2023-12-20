@@ -11,7 +11,7 @@ type Props = {
 
 const ArticleHeader = ({ name }: Props) => {
   return (
-    <header className="flex justify-center gap-1 mb-12 text-center mt-6">
+    <header className="flex justify-center gap-1 text-center mt-10 mb-5">
       <ButterflyPointer />
 
       <div style={{ fontWeight: 900 }} className="text-5xl font-bold underline">

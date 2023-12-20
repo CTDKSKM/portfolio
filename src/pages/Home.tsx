@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Home/Header';
-import ScrollToTopButton from '../components/Home/ScrollToTopButton';
 import MouseEffect from '../components/MouseEffect';
 import useMouseEffect from '../hooks/useMouseEffect';
 import Main from '../components/Home/Main';
@@ -17,7 +16,6 @@ const Home = (props: Props) => {
       <Header />
       <Main />
 
-      {/* <ScrollToTopButton /> */}
       {/* <Footer /> */}
       {Array.from(mouseEffects) &&
         Array.from(mouseEffects).map(([key, { id, x, y, size }]) => {

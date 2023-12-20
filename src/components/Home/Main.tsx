@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useRecoilValue } from 'recoil';
 import { itemState } from '../../recoil/itemState';
 import useItemCount from '../../hooks/useItemCount';
@@ -19,14 +19,15 @@ const Main = (props: Props) => {
 
   useEffect(() => {
     const handleClickCount = (event: MouseEvent) => {
+      console.log(event.target);
       if (event.target instanceof HTMLElement) {
         const targetTagName = event.target.tagName.toUpperCase();
         if (['BUTTON', 'A', 'IFRAME', 'VIDEO'].includes(targetTagName)) return;
       }
 
-      if (event.clientX >= window.innerWidth / 2) {
+      if (event.clientX >= (window.innerWidth / 5) * 3) {
         increaseItemCount();
-      } else {
+      } else if (event.clientX <= (window.innerWidth / 5) * 2) {
         decreaseItemCount();
       }
     };
@@ -51,18 +52,20 @@ const Main = (props: Props) => {
   }, [count]);
 
   return (
-    <main
-      ref={mainRef}
-      className="relative flex items-center w-[500vw] max-h-[100vh] overflow-hidden transition-transform duration-300"
-    >
-      {MAIN_ITEMS.map((item, idx) => {
-        return (
-          <div key={idx} className="w-1/5">
-            {item}
-          </div>
-        );
-      })}
-    </main>
+    <>
+      <main
+        ref={mainRef}
+        className="relative flex items-center w-[500vw] max-h-[100vh] overflow-hidden transition-transform duration-300"
+      >
+        {MAIN_ITEMS.map((item, idx) => {
+          return (
+            <div key={idx} className="w-1/5">
+              {item}
+            </div>
+          );
+        })}
+      </main>
+    </>
   );
 };
 
