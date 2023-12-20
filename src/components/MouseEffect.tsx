@@ -17,7 +17,7 @@ const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
   const randomR = Math.random() * num1 + num2;
   const randomG = Math.random() * num1 + num2;
   const randomB = Math.random() * num1 + num2;
-  const randomA = Math.random() / 2 + 0.5;
+  const randomA = Math.random() / 2 + 0.3;
 
   useEffect(() => {
     if (self.current instanceof HTMLDivElement) {
@@ -30,14 +30,14 @@ const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
 
         self.current.style.backgroundColor = `rgba(${randomR},${randomG},${randomB},${(randomA + 1) / 2})`;
 
-        self.current.style.transform = `translate(${(randomA - 0.5) * -size + 'px'},${
-          (randomA - 0.5) * size + 'px'
-        }) scale(${Math.max(2, 2 + ((randomA + 1) / 5 + 0.5))})`;
+        self.current.style.transform = `translate(${-randomA + 'px'},${randomA + 'px'}) scale(${
+          1.5 + size / 6
+        }) rotate(${Math.random() * 360}deg)`;
 
         setTimeout(() => {
           if (!self.current) return;
           deleteFn(id);
-        }, delay + 150);
+        }, delay + 50);
       }, 45);
     }
   }, []);
@@ -56,7 +56,8 @@ const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
         pointerEvents: 'none',
         transition: `all ${delay / 1000 + 's'} ease-out`,
         filter: 'brightness(1.35)',
-        zIndex: '9999'
+        zIndex: '9999',
+        clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)'
       }}
     ></div>
   );

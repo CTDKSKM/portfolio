@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import throttle from 'lodash/throttle';
 
 const useMouseEffect = () => {
+  const $body = document.querySelector('body');
   const delay = 80;
   const keyMode = false;
   const [mouseEffects, setMouseEffects] = useState<Map<number, { id: number; size: number; x: number; y: number }>>(
@@ -25,7 +26,7 @@ const useMouseEffect = () => {
       const newEffects = new Map(prevEffects);
       const newFadeOutDiv = {
         id: Math.random() + x + y,
-        size: Math.min(10, 5 + speed),
+        size: Math.min(10, 7 + speed / 4),
         x,
         y
       };
@@ -63,19 +64,21 @@ const useMouseEffect = () => {
         if (blockNesting) return;
 
         addMouseEffect();
-        blockNesting = true;
       } else if (event.key === 'e') {
         removeMouseEffect();
-        blockNesting = false;
       }
     };
 
     const addMouseEffect = () => {
+      blockNesting = true;
+
       document.addEventListener('mousemove', handleMousemove);
       document.addEventListener('scroll', handleScrollMove);
     };
 
     const removeMouseEffect = () => {
+      blockNesting = false;
+
       document.removeEventListener('mousemove', handleMousemove);
       document.removeEventListener('scroll', handleScrollMove);
       setMouseEffects(new Map());
@@ -89,15 +92,24 @@ const useMouseEffect = () => {
         delay
       );
     };
-    if (keyMode) {
-      document.addEventListener('keyup', handleKeyUp);
-    } else addMouseEffect();
+    const startEffect = () => {
+      if (keyMode) {
+        document.addEventListener('keyup', handleKeyUp);
+        $body?.addEventListener('mouseleave', removeMouseEffect);
+      } else {
+        $body?.addEventListener('mouseenter', addMouseEffect);
+        $body?.addEventListener('mouseleave', removeMouseEffect);
+      }
+    };
+    startEffect();
 
     return () => {
       if (keyMode) document.removeEventListener('keyup', handleKeyUp);
       removeMouseEffect();
+      $body?.removeEventListener('mouseenter', addMouseEffect);
+      $body?.removeEventListener('mouseleave', removeMouseEffect);
     };
-  }, []);
+  }, [keyMode]);
 
   //움직임 없을 때 자동생성
   useEffect(() => {

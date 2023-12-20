@@ -1,5 +1,7 @@
 import React from 'react';
 import { scrollToSection } from '../../utils/scrollUtils';
+import { Link } from 'react-router-dom';
+import ButterflyPointer from '../ButterflyPointer';
 
 type Props = {
   name: string;
@@ -10,20 +12,7 @@ type Props = {
 const ArticleHeader = ({ name }: Props) => {
   return (
     <header className="flex justify-center gap-1 mb-12 text-center mt-6">
-      <div
-        onClick={() => scrollToSection(name.toLowerCase())}
-        style={{ transition: 'transform 0.3s ease' }}
-        onMouseOver={(e) => (e.currentTarget.style.transform = 'rotate(-25deg)')}
-        onMouseOut={(e) => (e.currentTarget.style.transform = 'rotate(0deg)')}
-      >
-        <img
-          src={process.env.PUBLIC_URL + '/linkbutterfly.svg'}
-          alt="lightning"
-          width="24"
-          height="24"
-          style={{ cursor: 'pointer' }}
-        />
-      </div>
+      <ButterflyPointer />
 
       <div style={{ fontWeight: 900 }} className="text-5xl font-bold underline">
         {name.toUpperCase()}

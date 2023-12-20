@@ -1,14 +1,10 @@
 import React from 'react';
 import Header from '../components/Home/Header';
-import Intro from '../components/Home/Intro';
-import Footer from '../components/Home/Footer';
-import About from '../components/Home/About';
-import Skills from '../components/Home/Skills';
-import Archiving from '../components/Home/Archiving';
-import Projects from '../components/Home/Projects';
 import ScrollToTopButton from '../components/Home/ScrollToTopButton';
 import MouseEffect from '../components/MouseEffect';
 import useMouseEffect from '../hooks/useMouseEffect';
+import Main from '../components/Home/Main';
+import VisitedChecker from '../components/Home/VisitedChecker';
 
 type Props = {};
 
@@ -17,17 +13,12 @@ const Home = (props: Props) => {
 
   return (
     <>
+      <VisitedChecker />
       <Header />
+      <Main />
 
-      <Intro />
-      <About />
-      <Skills />
-      <Archiving />
-      <Projects />
-
-      <ScrollToTopButton />
-      <Footer />
-
+      {/* <ScrollToTopButton /> */}
+      {/* <Footer /> */}
       {Array.from(mouseEffects) &&
         Array.from(mouseEffects).map(([key, { id, x, y, size }]) => {
           return (

@@ -31,6 +31,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+.mainSection {
+  @apply w-[60vw] h-[60vh];
+}
 
 .interactiveBox {
   @apply p-4 bg-white rounded-2xl shadow-lg hover:shadow-lg transition duration-300 ease-in-out transform hover:translate-y-1 sm:w-[180px] lg:w-[220px];

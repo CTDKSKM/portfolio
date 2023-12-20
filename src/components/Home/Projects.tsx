@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ArticleHeader from './ArticleHeader';
 import { AiOutlineCheck } from 'react-icons/ai';
 import tistory from '../../static/images/tistory.jpg';
@@ -6,12 +6,40 @@ import tistory from '../../static/images/tistory.jpg';
 type Props = {};
 
 const Projects = (props: Props) => {
+  const content = ['Photo', 'Video'];
+  const [showContent, setShowContent] = useState(content[0]);
   return (
-    <article id="projects" className="w-full py-10 bg-blue-300">
+    <article id="projects" className="w-full py-10 bg-blue-300 flex flex-col justify-center items-center">
       <ArticleHeader name={'projects'} />
+      <section className="mainSection">
+        <div className="w-full h-full flex justify-center items-center mx-auto p-4 bg-white rounded-2xl shadow-lg hover:shadow-lg transition duration-300 ease-in-out transform hover:translate-y-1">
+          <div className="w-1/2 h-full bg-slate-300 p-2">
+            <div className="w-1/2 mx-auto p-2">
+              <ul className="flex justify-between">
+                {content.map((opt) => {
+                  return (
+                    <li key={opt}>
+                      <button onClick={() => setShowContent(opt)}>{opt}</button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
 
-      <section
-        style={{ width: '1500px', height: '1200px' }}
+            {showContent === content[0] && <img src={tistory} alt="tistory" />}
+            {showContent === content[1] && (
+              <iframe
+                className="w-full h-4/5"
+                src={`https://www.youtube.com/embed/${'xRsGniSa0tM'}?autoplay=1&origin=https%3A%2F%2Fwww.themoviedb.org&hl=ko&modestbranding=1&fs=1&autohide=1`}
+              />
+            )}
+          </div>
+
+          <div className="w-1/2 h-full bg-slate-500 p-2"></div>
+        </div>
+      </section>
+      {/* <section
+        style={{ width: '60vw', height: '80vh' }}
         className="mx-auto flex flex-col flex-wrap content-around gap-8 justify-center"
       >
         <div style={{ width: '100%', height: '100%' }} className="interactiveBox container mx-auto pl-8">
@@ -20,7 +48,6 @@ const Projects = (props: Props) => {
           <div className="container flex flex-row mt-5">
             <div style={{ height: '100vh', border: '1px solid black' }} className="w-1/2  bg-gray-300 p-4">
               <img style={{ width: '100%', height: '100%', border: '1px solid black' }} src={tistory} alt="tistory" />
-              {/* <ImageSlider/> */}
             </div>
             <div style={{ height: '100vh', border: '1px solid black' }} className="w-1/2 h-80 bg-gray-300 p-4">
               <p className="text-lg font-bold " id="info">
@@ -36,7 +63,6 @@ const Projects = (props: Props) => {
               <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 focus:outline-none focus:shadow-outline my-5">
                 자세히보기 - README
               </button>
-              {/* 수평선 */}
               <div className="border-b border-gray-500 my-3"></div>
 
               <ul className="list-disc m-3">
@@ -77,7 +103,7 @@ const Projects = (props: Props) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </article>
   );
 };
