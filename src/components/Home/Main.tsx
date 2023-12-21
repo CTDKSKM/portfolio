@@ -55,7 +55,7 @@ const Main = (props: Props) => {
     <>
       <main
         ref={mainRef}
-        className="relative flex items-center w-[500vw] max-h-[100vh] overflow-hidden transition-transform duration-300"
+        className="relative flex items-center w-[500vw] h-[100vh] overflow-hidden transition-transform duration-300"
       >
         {MAIN_ITEMS.map((item, idx) => {
           return (

@@ -3,6 +3,8 @@ import { useRecoilState } from 'recoil';
 import { itemState } from '../../recoil/itemState';
 import AuroraEffect from '../AuroraEffect';
 import ButterflyPointer from '../ButterflyPointer';
+import LargeNavigationBar from './LargeNavigationBar';
+import SmallNavigationBar from './SmallNavigationBar';
 
 type Props = {};
 
@@ -34,30 +36,9 @@ const Header = (props: Props) => {
           )}
         </div>
 
-        <ul className="flex space-x-4">
-          {navItem.map((item, idx) => {
-            return (
-              <li key={item} className="relative">
-                <button
-                  // onClick={() => scrollToSection(`${item.toLowerCase()}`)}
-                  onClick={() => {
-                    setCount(idx + 1);
-                  }}
-                  className={`${
-                    idx === count - 1 ? 'text-blue-400 underline' : 'hover:text-blue-400 hover:underline'
-                  } font-bold  cursor-pointer`}
-                >
-                  {item.replace('-', '')}
-                </button>
-                {idx === count - 1 && (
-                  <div className="absolute -top-2 -left-2">
-                    <ButterflyPointer size={12} />
-                  </div>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+        <LargeNavigationBar data={navItem} />
+
+        <SmallNavigationBar data={navItem} />
       </nav>
     </header>
   );

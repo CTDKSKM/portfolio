@@ -8,7 +8,7 @@ const ProjectsImageSlider = ({ imgs }: Props) => {
   const photoData = imgs;
 
   return (
-    <div className="flex justify-center items-center w-full rounded-md font-thin text-xl my-3 border-black border-2">
+    <div className="relative flex h-4/5 lg:h-auto justify-center items-center w-full rounded-md font-thin text-xl my-3 border-black">
       {!!imgs.length && (
         <EmblaCarousel
           slides={photoData.map((imageSrc, idx) => (

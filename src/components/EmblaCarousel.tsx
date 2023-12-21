@@ -53,8 +53,8 @@ export const EmblaCarousel = (props: PropType) => {
   }, [embla, onSelect]);
 
   return (
-    <div className="w-full relative rounded-md">
-      <div className="overflow-hidden relative rounded-md" ref={emblaRef}>
+    <div className="w-full h-full lg:h-4/5 absolute top-0 rounded-md">
+      <div className="overflow-hidden lg:relative rounded-md" ref={emblaRef}>
         <div className={`flex flex-col flex-wrap ${slideHeight} flex-none`}>
           {slides.map((slide, index) => (
             <div className={`${slideWidth} h-full relative`} key={index}>
@@ -63,7 +63,7 @@ export const EmblaCarousel = (props: PropType) => {
           ))}
         </div>
         {isSlideLength && (
-          <div className="absolute right-2 bottom-2 bg-[#0e0e0e72] rounded-full">
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-16 lg:bottom-24 bg-[#0e0e0e72] rounded-full">
             <div className="flex justify-evenly items-center text-xs w-9 font-semibold">
               <span className="text-white">{selectedIndex + 1}</span>
               <div className="w-[2.05px] h-[2.05px] rounded-full bg-[#ffffffb2]" />
@@ -88,13 +88,13 @@ export const EmblaCarousel = (props: PropType) => {
         )}
         {buttonPosition === 'bottom' && (
           <>
-            <div className={`absolute bottom-12 left-10 z-10 ${buttonPositionStyleL}`}>
+            <div className={`absolute bottom-12 lg:bottom-20 left-10 z-10 ${buttonPositionStyleL}`}>
               <button onClick={scrollPrev} disabled={prevBtnDisabled}>
                 <LeftArrow />
               </button>
             </div>
             <div
-              className={`absolute right-10 bottom-12 
+              className={`absolute right-10 bottom-12 lg:bottom-20 
             z-10 ${buttonPositionStyleR}`}
             >
               <button className="rotate-180" onClick={scrollNext} disabled={nextBtnDisabled}>

@@ -81,7 +81,6 @@ const useMouseEffect = () => {
 
       document.removeEventListener('mousemove', handleMousemove);
       document.removeEventListener('scroll', handleScrollMove);
-      setMouseEffects(new Map());
 
       setTimeout(
         () =>

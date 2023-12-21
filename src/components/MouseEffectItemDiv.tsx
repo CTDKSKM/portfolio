@@ -10,7 +10,7 @@ type Props = {
 
 const delay = 650;
 
-const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
+const MouseEffectItemDiv = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
   const self = useRef<HTMLDivElement | null>(null);
   const num1 = 190;
   const num2 = 255 - num1;
@@ -63,4 +63,4 @@ const MouseEffect = ({ id, mouseX, mouseY, size, deleteFn }: Props) => {
   );
 };
 
-export default MouseEffect;
+export default MouseEffectItemDiv;
