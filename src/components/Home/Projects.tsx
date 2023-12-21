@@ -60,7 +60,8 @@ const Projects = (props: Props) => {
                 <br />
                 <span className="font-bold">반응형 및 Interactive UI</span>에 대해 배울 수 있었고,{' '}
                 <span className="font-bold">토론게시판CRUD</span>를 구현하면서 프론트엔드 개발자로서{' '}
-                <span className="font-bold">유효성 검사 및 UX증진</span>에 대한 중요성을 체감할 수 있었습니다.
+                <span className="font-bold">유효성 검사 및 성능 최적화로 인한 UX증진</span>에 대한 중요성을 체감할 수
+                있었습니다.
               </span>
             </div>
 
