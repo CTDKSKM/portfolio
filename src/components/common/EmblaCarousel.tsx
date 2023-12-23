@@ -1,6 +1,6 @@
 import { ReactNode, useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
-import LeftArrow from '../static/svgs/LeftArrow';
+import LeftArrow from '../../static/svgs/LeftArrow';
 
 interface PropType {
   options?: EmblaOptionsType;

@@ -14,7 +14,7 @@ const SmallNavigationBar = ({ data }: Props) => {
 
   return (
     <div className="sm:hidden relative w-[80px]">
-      <div className="flex justify-between cursor-pointer" onClick={() => setIsNavigationBarOpen(true)}>
+      <div className="flex justify-between cursor-pointer" onClick={() => setIsNavigationBarOpen((prev) => !prev)}>
         <div className="-rotate-90">
           <LeftArrow width={12} height={12} />
         </div>

@@ -9,9 +9,8 @@ const VisitedChecker = (props: Props) => {
     setIsOpen(false);
   };
   useEffect(() => {
-    if (!window.localStorage.getItem('visited')) {
+    if (!window.localStorage.getItem('isGuideCompleted')) {
       setIsOpen(true);
-      window.localStorage.setItem('visited', 'true');
     }
   }, []);
   return <>{isOpen && <Guide close={closeModal} />}</>;

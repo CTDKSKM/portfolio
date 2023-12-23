@@ -1,4 +1,4 @@
-import EmblaCarousel from '../EmblaCarousel';
+import EmblaCarousel from '../common/EmblaCarousel';
 
 type Props = {
   imgs: string[];

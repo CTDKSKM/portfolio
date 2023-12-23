@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import ArticleHeader from './ArticleHeader';
-import moviebaba from '../../static/projectsimages/moviebaba/index';
-import ProjectsImageSlider from './ProjectsImageSlider';
+import ArticleHeader from '../ArticleHeader';
+import moviebaba from '../../../static/projectsimages/moviebaba/index';
+import ProjectsImageSlider from '../ProjectsImageSlider';
 
 type Props = {};
 
@@ -10,6 +10,7 @@ const Projects = (props: Props) => {
   const [showContent, setShowContent] = useState(contents[0]);
   const moviebabaImages = [...moviebaba];
   const [showProjectSkillState, setShowProjectSkillState] = useState(false);
+
   return (
     <article id="projects" className="w-full py-5 bg-blue-300 flex flex-col justify-center items-center">
       <ArticleHeader name={'projects'} />
@@ -70,6 +71,7 @@ const Projects = (props: Props) => {
                 className="w-[100px] border shadow-sm p-2 mt-2 rounded-full bg-white"
                 onMouseEnter={() => setShowProjectSkillState(true)}
                 onMouseLeave={() => setShowProjectSkillState(false)}
+                onClick={() => setShowProjectSkillState((prev) => !prev)}
               >
                 사용기술
               </button>

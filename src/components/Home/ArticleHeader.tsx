@@ -1,4 +1,4 @@
-import ButterflyPointer from '../ButterflyPointer';
+import ButterflyPointer from '../common/ButterflyPointer';
 
 type Props = {
   name: string;
@@ -11,7 +11,7 @@ const ArticleHeader = ({ name }: Props) => {
     <header className="flex justify-center gap-1 text-center my-5">
       <ButterflyPointer />
 
-      <div style={{ fontWeight: 900 }} className="text-5xl font-bold underline">
+      <div style={{ fontWeight: 900 }} className="text-3xl lg:text-5xl font-bold underline">
         {name.toUpperCase()}
       </div>
     </header>

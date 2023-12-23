@@ -1,5 +1,5 @@
 import React from 'react';
-import useMouseEffect from '../hooks/useMouseEffect';
+import useMouseEffect from '../../../hooks/useMouseEffect';
 import MouseEffectItemDiv from './MouseEffectItemDiv';
 
 type Props = {};

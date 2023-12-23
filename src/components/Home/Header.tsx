@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useRecoilState } from 'recoil';
 import { itemState } from '../../recoil/itemState';
-import AuroraEffect from '../AuroraEffect';
-import ButterflyPointer from '../ButterflyPointer';
+import AuroraEffect from '../common/AuroraEffect';
+import ButterflyPointer from '../common/ButterflyPointer';
 import LargeNavigationBar from './LargeNavigationBar';
 import SmallNavigationBar from './SmallNavigationBar';
 

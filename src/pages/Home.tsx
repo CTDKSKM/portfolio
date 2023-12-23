@@ -3,7 +3,7 @@ import Header from '../components/Home/Header';
 
 import Main from '../components/Home/Main';
 import VisitedChecker from '../components/Home/VisitedChecker';
-import MouseEffector from '../components/MouseEffector';
+import MouseEffector from '../components/common/mouseEffect/MouseEffector';
 
 type Props = {};
 

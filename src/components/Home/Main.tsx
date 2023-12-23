@@ -19,7 +19,6 @@ const Main = (props: Props) => {
 
   useEffect(() => {
     const handleClickCount = (event: MouseEvent) => {
-      console.log(event.target);
       if (event.target instanceof HTMLElement) {
         const targetTagName = event.target.tagName.toUpperCase();
         if (['BUTTON', 'A', 'IFRAME', 'VIDEO'].includes(targetTagName)) return;

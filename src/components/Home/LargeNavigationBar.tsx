@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRecoilState } from 'recoil';
 import { itemState } from '../../recoil/itemState';
-import ButterflyPointer from '../ButterflyPointer';
+import ButterflyPointer from '../common/ButterflyPointer';
 
 type Props = {
   data: string[];
