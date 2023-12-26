@@ -15,9 +15,10 @@ const ProjectContainer = ({ project }: Props) => {
   const [showProjectSkillState, setShowProjectSkillState] = useState(false);
   const skillContainerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (skillContainerRef.current instanceof HTMLDivElement) {
-      console.log(skillContainerRef.current.style.opacity);
-      setTimeout(() => (skillContainerRef.current!.style.opacity = '1'), 1);
+    if (showProjectSkillState) {
+      if (skillContainerRef.current instanceof HTMLDivElement) {
+        setTimeout(() => (skillContainerRef.current!.style.opacity = '1'), 10);
+      }
     }
   }, [showProjectSkillState]);
 
