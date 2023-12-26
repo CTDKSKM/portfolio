@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# 포트폴리오 웹사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[https://portfolio-ctdkskm.vercel.app/]
 
-## Available Scripts
+## 주요 기능
 
-In the project directory, you can run:
+- **인터랙티브한 UI/UX 디자인:** 마우스 움직임, 클릭, 휠 등 다양한 이벤트를 활용하여 사용자와의 상호작용을 극대화하였습니다.
+- **별모양 이펙트:** 마우스 움직임에 반응하여 동적으로 생성되는 별모양 이펙트로 시각적인 효과를 부여하였습니다.
+- **가로 슬라이딩 컨텐츠 네비게이션:** 화면을 가로로 나누어 왼쪽과 오른쪽을 클릭하면 각각 이전 페이지와 다음 페이지로 이동할 수 있도록 설계하였습니다.
 
-### `yarn start`
+## 핵심 역량
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1. 웹 개발
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **HTML, CSS, JavaScript:** 웹 표준에 맞춘 마크업 및 스타일링을 구현하고, 동적인 웹 페이지를 위해 JavaScript를 활용하였습니다.
 
-### `yarn test`
+### 2. 사용자 경험 (UX) 및 인터랙션
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **인터랙티브한 UI/UX 디자인:** 다양한 이벤트 처리를 통해 사용자와의 원활한 상호작용을 제공하였습니다.
 
-### `yarn build`
+### 3. 프로젝트 관리
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **포트폴리오 웹사이트:** 직접 기획하고 개발한 포트폴리오 웹사이트를 통해 프로젝트 기획부터 완성까지의 경험을 쌓았습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 프로젝트 상세내용
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. 홈화면
 
-### `yarn eject`
+![홈화면](https://firebasestorage.googleapis.com/v0/b/with-ts.appspot.com/o/etc%2Fskm_portfolio%2Fstart.png?alt=media&token=3e667a99-b946-4590-8f69-6a5023ab643b)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. About Me
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![About Me](https://firebasestorage.googleapis.com/v0/b/with-ts.appspot.com/o/etc%2Fskm_portfolio%2F1.png?alt=media&token=78adbad0-0e5c-469b-ae58-aaeeb71959a8)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 3. Skills
 
-## Learn More
+![Skills](https://firebasestorage.googleapis.com/v0/b/with-ts.appspot.com/o/etc%2Fskm_portfolio%2F2.png?alt=media&token=c78a85ef-a234-4ace-ba42-090996f4118f)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. Archiving
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Archiving](https://firebasestorage.googleapis.com/v0/b/with-ts.appspot.com/o/etc%2Fskm_portfolio%2F3.png?alt=media&token=8943f947-3a3c-4fd6-a2ce-ccb4950a537a)
+
+### 5. Projects
+
+![Projects](https://firebasestorage.googleapis.com/v0/b/with-ts.appspot.com/o/etc%2Fskm_portfolio%2F4.png?alt=media&token=f697b4f0-9b05-45b2-8d6e-9d5c6c10443a)
+
+## 링크
+
+- [GitHub 프로필](https://github.com/CTDKSKM): 추가적인 프로젝트 및 소스코드를 확인할 수 있습니다.
+
+## 연락처
+
+- 이메일: skmdldy001@gamil.com
+
+  
+
+## 감사합니다.
