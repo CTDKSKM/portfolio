@@ -12,7 +12,7 @@ const ProjectsImageSlider = ({ imgs }: Props) => {
       {!!imgs.length && (
         <EmblaCarousel
           slides={photoData.map((imageSrc, idx) => (
-            <img key={idx} src={`${imageSrc}`} className="object-cover p-3" alt=""></img>
+            <img key={idx} src={`${imageSrc}`} className="w-full object-cover max-h-[320px] p-3" alt=""></img>
           ))}
           options={{
             align: 'start',
