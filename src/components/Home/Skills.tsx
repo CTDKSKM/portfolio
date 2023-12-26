@@ -20,7 +20,6 @@ const Skills = (props: Props) => {
       <section className="w-[100vw]">
         <div className="hidden lg:flex w-3/5 h-[800px] mx-auto flex-col flex-wrap content-around gap-8">
           {skillContainers.map((box, index) => {
-            console.log('index=>', index, box.imgUrl);
             return (
               <div key={index} className="interactiveBox">
                 <div className="mx-auto font-bold text-yellow-600 text-3xl">{box.value}</div>

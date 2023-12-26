@@ -40,12 +40,19 @@ code {
   .interactiveBox {
     @apply p-4 bg-white rounded-2xl shadow-xl hover:shadow-xl transition duration-300 ease-in-out transform hover:translate-y-1;
   }
+
+  .descMainText {
+    @apply font-bold hover:text-blue-500 transition-all duration-300;
+  }
 }
 
 .footerIcon {
   @apply cursor-pointer hover:opacity-80 transition-opacity duration-300;
 }
-
+.descTextContainer {
+  font-weight: 500;
+  font-style: normal;
+}
 .aurora {
   position: absolute;
   top: 0;
