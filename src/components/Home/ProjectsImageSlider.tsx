@@ -21,7 +21,7 @@ const ProjectsImageSlider = ({ imgs }: Props) => {
             inViewThreshold: 0.7,
             dragFree: false
           }}
-          slideHeight="h-[220px] sm:h-[10.5rem] lg:h-[28rem]"
+          slideHeight="h-[45vh]"
           slideWidth="w-full sm:w-1/2 lg:w-full"
           isSlideLength={true}
           buttonPosition="bottom"

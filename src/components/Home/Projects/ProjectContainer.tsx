@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import ProjectsImageSlider from '../ProjectsImageSlider';
 import { PROJECT_ITEM } from '../../../static/projectItems';
 import { Link } from 'react-router-dom';
+import GithubSVG from '../../../static/svgs/GitHub';
 
 type Props = {
   project: PROJECT_ITEM;
@@ -9,7 +10,7 @@ type Props = {
 
 const ProjectContainer = ({ project }: Props) => {
   const { project_name, imgs, period, desc, skills } = project;
-  const contents = project.videoKey ? ['Photo', 'Video'] : ['Photo'];
+  const contents = project.video_url ? ['Photo', 'Video'] : ['Photo'];
   const [showContent, setShowContent] = useState(contents[0]);
   const [showProjectSkillState, setShowProjectSkillState] = useState(false);
   const skillContainerRef = useRef<HTMLDivElement>(null);
@@ -47,18 +48,13 @@ const ProjectContainer = ({ project }: Props) => {
               <ProjectsImageSlider imgs={imgs} />
             </div>
           )}
-          {showContent === contents[1] && project?.videoKey && (
-            <iframe
-              className="p-2 w-full h-4/5"
-              src={`https://www.youtube.com/embed/${project.videoKey}?autoplay=1&origin=https%3A%2F%2Fwww.themoviedb.org&hl=ko&modestbranding=1&fs=1&autohide=1`}
-            />
+          {showContent === contents[1] && project?.video_url && (
+            <iframe className="p-2 w-full h-4/5" src={`${project.video_url}`} />
           )}
         </div>
 
         <div className="text-sm md:text-md lg:text-md hidden relative flex-col justify-between items-stretch lg:flex w-full lg:w-1/2 h-full p-5">
-          <div className="p-2 flex flex-col justify-center items-center border-b border-black pb-5 h-[350px] overflow-auto">
-            {desc}
-          </div>
+          <div className="p-2 flex flex-col justify-center items-center border-b border-black h-[350px]">{desc}</div>
           <div className="flex flex-col gap-2 my-2">
             <div className="font-bold">
               Github:{' '}
