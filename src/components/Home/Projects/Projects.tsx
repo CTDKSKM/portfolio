@@ -41,7 +41,7 @@ const Projects = (props: Props) => {
         )}
         {showIndex < maxIndex && (
           <button className="absolute -bottom-10 right-0 rotate-180 z-10" onClick={increaseShowIndex}>
-            <LeftArrowFull className="hover:bg-slate-300" />
+            <LeftArrowFull className="transition-all duration-500" />
           </button>
         )}
       </div>

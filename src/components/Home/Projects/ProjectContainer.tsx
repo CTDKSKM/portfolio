@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ProjectsImageSlider from '../ProjectsImageSlider';
 import { PROJECT_ITEM } from '../../../static/projectItems';
-import { Link } from 'react-router-dom';
-import GithubSVG from '../../../static/svgs/GitHub';
 
 type Props = {
   project: PROJECT_ITEM;
@@ -17,7 +15,7 @@ const ProjectContainer = ({ project }: Props) => {
   useEffect(() => {
     if (showProjectSkillState) {
       if (skillContainerRef.current instanceof HTMLDivElement) {
-        setTimeout(() => (skillContainerRef.current!.style.opacity = '1'), 10);
+        setTimeout(() => (skillContainerRef.current!.style.opacity = '1'), 15);
       }
     }
   }, [showProjectSkillState]);
@@ -99,7 +97,7 @@ const ProjectContainer = ({ project }: Props) => {
                 onMouseLeave={() => setShowProjectSkillState(false)}
                 style={{
                   opacity: '0',
-                  transition: 'opacity 0.5s'
+                  transition: 'opacity 0.7s'
                 }}
               >
                 <div className="w-full absolute bottom-16 left-0 p-5 text-sm rounded-2xl bg-blue-200">{skills}</div>

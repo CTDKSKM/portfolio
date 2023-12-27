@@ -21,7 +21,7 @@ const Main = (props: Props) => {
     const handleClickCount = (event: MouseEvent) => {
       if (event.target instanceof HTMLElement) {
         const targetTagName = event.target.tagName.toUpperCase();
-        if (['BUTTON', 'A', 'IFRAME', 'VIDEO'].includes(targetTagName)) return;
+        if (['BUTTON', 'A', 'IFRAME', 'VIDEO', 'SVG'].includes(targetTagName)) return;
       }
 
       if (event.clientX >= (window.innerWidth / 5) * 3) {
